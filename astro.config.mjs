@@ -7,6 +7,7 @@ import d2 from 'astro-d2';
 // https://astro.build/config
 export default defineConfig({
   integrations: [
+    d2({ output: 'd2' }),
     starlight({
       title: 'Enterprise Architecture',
       favicon: '/favicon.svg',
@@ -49,6 +50,5 @@ export default defineConfig({
         },
       ],
     }),
-    d2(),
   ],
 });

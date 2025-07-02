@@ -20,11 +20,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-
-*.pdf
-src/assets/artifacts/
-src/assets/board/
-src/assets/files/
-
-public/favicon.ico
+public/d2/
 

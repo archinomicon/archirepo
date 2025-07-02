@@ -4,7 +4,13 @@ title: Finance
 
 ## as-is
 
-![as-is](/src/assets/houston.webp)
+```d2 sketch
+# A simple flowchart
+direction: right
+eBanking {shape: document}
+eBanking -> Core System: processes {style.animated: true}
+Core System -> Management Reporting: generates {style.animated: true}
+```
 
 ## to-be
 

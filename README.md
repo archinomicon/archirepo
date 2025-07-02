@@ -2,7 +2,8 @@
 
 Minimalistic Enterprise Architecture Repository
 
-## libs
+## dependencies
 
 npm create astro@latest
+
 npx astro add astro-d2
