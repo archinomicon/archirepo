@@ -1,7 +1,6 @@
 ---
 title: HR
 description: HR
-assets: 1C Websoft-HCM
 ---
 
 ## as-is
