@@ -9,7 +9,8 @@ export default defineConfig({
   site: 'https://archinomicon.github.io',
   base: 'ea-repo',
   integrations: [
-    d2({ output: 'd2' }),
+    d2(),
+    // d2({ output: 'd2' }),
     starlight({
       title: 'Enterprise Architecture',
       favicon: '/favicon.svg',

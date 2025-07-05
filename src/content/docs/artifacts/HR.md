@@ -19,6 +19,6 @@ Core System -> Card Processing: payment info {style.animated: true}
 
 ![as-is](/src/assets/houston.webp)
 
-## IT Castodian
+## IT Custodian
 
 > TBD

@@ -16,6 +16,6 @@ Core System -> Management Reporting: generates {style.animated: true}
 
 ![as-is](/src/assets/houston.webp)
 
-## IT Castodian
+## IT Custodian
 
 > TBD
