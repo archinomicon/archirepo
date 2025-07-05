@@ -41,7 +41,7 @@ jobs:
       # Assumes the diagram is located at the repo's root.
       # Adjust according to your project structure.
       - name: Generate diagram
-        run: d2 ${{ env.FILENAME }}.d2 ${{ env.FILENAME }}.png
+        run: d2 ${{ env.FILENAME }}.md ${{ env.FILENAME }}.png
       # Publishes the PNG under GitHub's Release tab
       - name: Release
         uses: softprops/action-gh-release@v1
