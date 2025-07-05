@@ -17,36 +17,36 @@ permissions:
   id-token: write
 
 jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      # Extracts the file name from the pushed tag
-      - name: Extract filename
-        run: echo "FILENAME=${GITHUB_REF#refs/tags/*-}" >> $GITHUB_ENV
-      - name: Install d2
-        run: curl -fsSL https://d2lang.com/install.sh | sh -s --
-      # Caches playwright without relying on `package.json`.
-      # If you want to force a playwright upgrade, delete the cache in the GitHub Actions UI.
-      - name: Cache playwright binaries
-        id: cache-playwright
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-cache
-      # Installs playwright if it's not already cached
-      - name: Install playwright
-        if: steps.cache-playwright.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps chromium
-      # Assumes the diagram is located at the repo's root.
-      # Adjust according to your project structure.
-      - name: Generate diagram
-        run: d2 ${{ env.FILENAME }}.d2 ${{ env.FILENAME }}.png
-      # Publishes the PNG under GitHub's Release tab
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: ${{ env.FILENAME }}.png
+  # generate:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     # Extracts the file name from the pushed tag
+  #     - name: Extract filename
+  #       run: echo "FILENAME=${GITHUB_REF#refs/tags/*-}" >> $GITHUB_ENV
+  #     - name: Install d2
+  #       run: curl -fsSL https://d2lang.com/install.sh | sh -s --
+  #     # Caches playwright without relying on `package.json`.
+  #     # If you want to force a playwright upgrade, delete the cache in the GitHub Actions UI.
+  #     - name: Cache playwright binaries
+  #       id: cache-playwright
+  #       uses: actions/cache@v4
+  #       with:
+  #         path: ~/.cache/ms-playwright
+  #         key: playwright-cache
+  #     # Installs playwright if it's not already cached
+  #     - name: Install playwright
+  #       if: steps.cache-playwright.outputs.cache-hit != 'true'
+  #       run: npx playwright install --with-deps chromium
+  #     # Assumes the diagram is located at the repo's root.
+  #     # Adjust according to your project structure.
+  #     - name: Generate diagram
+  #       run: d2 ${{ env.FILENAME }}.d2 ${{ env.FILENAME }}.png
+  #     # Publishes the PNG under GitHub's Release tab
+  #     - name: Release
+  #       uses: softprops/action-gh-release@v1
+  #       with:
+  #         files: ${{ env.FILENAME }}.png
 
   build:
     runs-on: ubuntu-latest
