@@ -10,15 +10,14 @@ hero:
     - text: Go to Artifacts
       link: /ea-repo/featured/introduction/
       icon: right-arrow
-    - text: Tech Radar
-      link: http://localhost:3000
-      icon: setting
-      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <CardGrid stagger>
+  <Card title="Tech Radar Example" icon="setting">
+    **[See more...](https://opensource.zalando.com/tech-radar/)**
+  </Card>
   <Card title="Architecture Board: Core System" icon="pencil">
     **[See more...](/ea-repo/board/2025-06-01_core/)**
   </Card>
