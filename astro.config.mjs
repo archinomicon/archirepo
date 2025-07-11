@@ -7,7 +7,7 @@ import d2 from 'astro-d2';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://archinomicon.github.io',
-  base: '/ea-repo',
+  base: '/archirepo',
   integrations: [
     d2(),
     // d2({ output: 'd2' }),
