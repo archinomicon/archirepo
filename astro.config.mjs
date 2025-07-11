@@ -18,7 +18,7 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://archinomicon.github.io',
+          href: 'https://github.com/archinomicon',
         },
       ],
       sidebar: [
