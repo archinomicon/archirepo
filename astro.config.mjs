@@ -12,7 +12,7 @@ export default defineConfig({
     d2(),
     // d2({ output: 'd2' }),
     starlight({
-      title: 'Enterprise Architecture',
+      title: 'Architecture Repository',
       favicon: '/favicon.svg',
       social: [
         {
